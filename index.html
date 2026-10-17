@@ -1,0 +1,557 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brendan McGovern — Creative Lead • Art Director • Designer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=PT+Sans+Mono:wght@400;700&display=swap" rel="stylesheet"><style>
+:root{--acid:#dfff00;--pink:#e58abb;--paper:#f1efe8;--ink:#050505;--nav-h:72px}*{box-sizing:border-box}html,body{margin:0;font-family:'PT Sans Mono',monospace;color:var(--ink);background:var(--acid);overscroll-behavior-y:none}button,a{font:inherit;color:inherit}a{text-decoration:none}.topbar{position:fixed;z-index:300;top:0;left:0;right:0;height:var(--nav-h);padding:0 4.5vw;display:flex;justify-content:space-between;align-items:center;pointer-events:none;background:#fff;border-bottom:1px solid rgba(0,0,0,.12)}.identity,.menu-toggle{pointer-events:auto}.identity{font-size:11px;font-weight:400;line-height:1.15;letter-spacing:.01em;white-space:nowrap}.identity strong,.identity span{display:inline;font:inherit}.identity strong::after{content:'  '}.menu-toggle{border:0;background:none;padding:8px 0;cursor:pointer;width:40px;height:34px;font-size:0;position:relative;flex:0 0 40px}.menu-toggle::before,.menu-toggle::after,.menu-toggle{background-image:linear-gradient(#050505,#050505);background-size:40px 2px;background-repeat:no-repeat;background-position:center}.menu-toggle::before,.menu-toggle::after{content:'';position:absolute;left:0;width:40px;height:2px;background:#050505}.menu-toggle::before{top:6px}.menu-toggle::after{bottom:6px}.menu-panel{position:fixed;z-index:290;top:var(--nav-h);left:0;right:0;bottom:0;background:rgba(241,239,232,.99);padding:28px 3vw 5vh;transform:translateY(-110%);transition:transform .5s cubic-bezier(.22,.78,.18,1);overflow:auto}.menu-panel.open{transform:none}.menu-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid;padding-bottom:14px;margin-bottom:12px;font-size:11px;font-weight:700}.menu-close{border:0;background:none;cursor:pointer}.menu-projects{display:grid;grid-template-columns:1fr 1fr;column-gap:5vw}.menu-row{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;width:100%;text-align:left;border:0;border-bottom:1px solid rgba(0,0,0,.18);background:none;padding:13px 0;cursor:pointer}.menu-row:hover,.menu-row:focus{background:var(--acid);outline:none}.menu-row span:last-child{opacity:.62}.menu-links{display:flex;gap:28px;padding-top:28px;font-size:11px}.intro{height:230dvh}.stage{position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;overflow:hidden;background:var(--acid);z-index:10;touch-action:none}.hero-logo{position:absolute;left:50%;top:50%;width:min(47vw,62dvh);transform:translate(-50%,-50%) rotate(0deg);transform-origin:center;mix-blend-mode:multiply;will-change:transform}.stage canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.cue,.motion-enable{position:absolute;font-size:9px;letter-spacing:.12em}.cue{left:50%;bottom:18px;transform:translateX(-50%)}.motion-enable{left:18px;bottom:18px;border:0;border-bottom:1px solid;background:transparent;padding:3px 0;display:none;cursor:pointer}.motion-enable.show{display:block}.gallery{position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;z-index:40;background:var(--paper);transform:translateY(100%);overflow:hidden;overscroll-behavior:none}.gallery-head{height:70px;position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;padding:0 3vw;background:rgba(241,239,232,.97);font-size:11px;letter-spacing:.02em}.object-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8vh 4vw;padding:7vh 5vw 14vh}.object-card{height:32vh;min-height:250px;position:relative;cursor:grab;display:flex;align-items:center;justify-content:center;overflow:visible;isolation:isolate}.object-card:active{cursor:grabbing}.object-card model-viewer{width:100%;height:100%;background:transparent;--poster-color:transparent;touch-action:pan-y;filter:none!important;transform:scale(var(--object-scale,1));transform-origin:center;transition:none}.hit{position:absolute;inset:0;z-index:4;touch-action:pan-y}.hover-label{position:absolute;left:8px;right:8px;bottom:-10px;z-index:6;opacity:0;transform:translateY(5px);transition:.18s;pointer-events:none;text-align:center;font-size:11px;line-height:1.25}.hover-label small{display:block;margin-top:4px;font-size:9px;font-weight:400;opacity:.65}.object-card:hover .hover-label,.object-card:focus-within .hover-label{opacity:1;transform:none}.placeholder{display:none}.case{position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;z-index:180;background:var(--paper);transform:translateY(100%);transition:transform .68s cubic-bezier(.22,.78,.18,1);overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}.case.open{transform:translateY(0)}.case-close{position:fixed;right:18px;top:calc(var(--nav-h) + 14px);z-index:220;border:1px solid #111;background:var(--paper);border-radius:999px;padding:8px 12px;cursor:pointer;font-size:10px}.case-inner{min-height:100%}.case-hero{min-height:72dvh;padding:14dvh 4vw 5vw;display:flex;flex-direction:column;justify-content:flex-end}.case-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.05em}.case-title{font-size:clamp(32px,5.4vw,87px);font-weight:400;line-height:.88;letter-spacing:-.055em;margin:18px 0 0}.case-intro,.case-story{padding:8vw 4vw;display:grid;grid-template-columns:.7fr 1.3fr;gap:7vw}.case-lead,.case-story p{font-size:clamp(19px,2.56vw,37px);font-weight:400;line-height:1.06;letter-spacing:-.03em;margin:0}.case-copy{font-size:14px;line-height:1.65;max-width:620px}.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid;border-bottom:1px solid;margin-top:28px}.fact{padding:14px 5px;font-size:9px;text-transform:uppercase}.fact b{display:block;font-size:11px;margin-top:6px}.case-visual{height:62dvh;margin:0 4vw;background:var(--acid);display:grid;place-items:center;font-size:clamp(28px,5vw,80px);font-weight:400;letter-spacing:-.04em}.case-split{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 4vw}.case-split div{height:48dvh;background:var(--pink);display:grid;place-items:center;font-size:18px}.case-story h2{font-size:9px;text-transform:uppercase;letter-spacing:.08em;font-weight:400}.return-reveal{height:72dvh;position:relative;background:var(--acid);pointer-events:none}.return-note{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:9px;letter-spacing:.1em;white-space:nowrap}.case.peeling{transition:none}.gallery-under{z-index:170}
+@media(max-width:900px){:root{--nav-h:76px}.topbar{padding:0 16px}.identity{white-space:normal;max-width:calc(100vw - 86px)}.identity strong,.identity span{display:block}.identity strong{font-size:12px;line-height:1.1}.identity strong::after{content:''}.identity span{font-size:9px;line-height:1.25;margin-top:3px}.menu-toggle{width:34px;flex-basis:34px}.menu-toggle::before,.menu-toggle::after,.menu-toggle{background-size:34px 2px}.menu-toggle::before,.menu-toggle::after{width:34px}.menu-projects{grid-template-columns:1fr}.menu-row{grid-template-columns:1fr}.menu-row span:last-child{font-size:9px}.hero-logo{width:min(66vw,54dvh)}.object-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:5.5vh 4vw;padding:5vh 16px 12vh}.object-card{height:27dvh;min-height:190px;padding-bottom:30px}.hover-label{opacity:1;transform:none;bottom:-2px;font-size:10px}.hover-label small{font-size:8px}.case-hero{min-height:54dvh;padding:9dvh 18px 32px}.case-title{font-size:clamp(26px,7.2vw,43px);line-height:.92;letter-spacing:-.045em}.case-kicker{font-size:8px}.case-intro,.case-story{grid-template-columns:1fr;gap:26px;padding:56px 18px}.case-lead,.case-story p{font-size:clamp(16px,4.32vw,22px);line-height:1.14;letter-spacing:-.025em}.case-copy{font-size:12px;line-height:1.7}.facts{grid-template-columns:1fr 1fr 1fr;margin-top:24px}.fact{font-size:8px}.fact b{font-size:9px}.case-visual{height:48dvh;margin:0 18px;font-size:10vw}.case-split{grid-template-columns:1fr;padding:8px 18px}.case-split div{height:38dvh;font-size:16px}.case-story h2{font-size:8px}.return-reveal{height:58dvh}.case-close{right:12px;top:calc(var(--nav-h) + 10px);font-size:9px}.motion-enable{display:none}.motion-enable.show{display:block}}
+@media(max-width:560px){.gallery-head{height:58px;top:0}.gallery{overflow:auto}.object-grid{position:relative}.object-grid{gap:4.5vh 10px}.object-card{height:25dvh;min-height:175px}.case-title{font-size:6.9vw}.case-intro,.case-story{padding-top:48px;padding-bottom:48px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.case,.menu-panel{transition-duration:.01ms!important}}
+
+/* V13 — editorial case heroes + touch labels + simplified physics */
+.case-hero{position:relative;min-height:clamp(420px,62dvh,760px);padding:0;background:#292929 center/cover no-repeat;overflow:hidden;display:flex;align-items:flex-end}.case-hero::before{content:"HERO IMAGE TO ADD";position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.22);font-size:10px;letter-spacing:.12em}.case-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.56) 0%,rgba(0,0,0,.18) 45%,rgba(0,0,0,0) 72%);pointer-events:none}.case-hero-copy{position:relative;z-index:2;width:min(92%,760px);padding:0 4vw 7vh;color:var(--acid)}.case-title{font-size:clamp(34px,4.2vw,68px);line-height:.94;letter-spacing:.015em;text-transform:uppercase;font-weight:700;margin:0 0 12px;max-width:12ch;text-align:left}.case-client-hero{font-size:clamp(10px,1.05vw,15px);letter-spacing:.08em;text-transform:uppercase;text-align:left}.case-kicker{margin-top:18px;font-size:9px;opacity:.82}.case-close{background:rgba(241,239,232,.92);backdrop-filter:blur(8px)}
+@media(max-width:900px){.case-hero{min-height:48dvh}.case-hero-copy{padding:0 18px 34px;width:88%}.case-title{font-size:clamp(25px,7vw,38px);line-height:.98;max-width:13ch}.case-client-hero{font-size:9px}.case-kicker{font-size:7px;margin-top:12px}.case-hero-shade{background:linear-gradient(90deg,rgba(0,0,0,.62),rgba(0,0,0,.08) 82%)}.object-card{padding-bottom:44px}.hover-label{bottom:2px;opacity:1;transform:none;font-size:10px;line-height:1.25}.hover-label small{font-size:8px;margin-top:3px}.object-card model-viewer{height:calc(100% - 38px)}}
+@media(hover:hover) and (pointer:fine){.hover-label{opacity:0;transform:translateY(5px)}.object-card:hover .hover-label,.object-card:focus-within .hover-label{opacity:1;transform:none}}
+</style></head><body>
+<header class="topbar" id="topbar"><div class="identity"><strong>BRENDAN MCGOVERN</strong><span>CREATIVE + ART DIRECTOR + DESIGNER</span></div><button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel"></button></header><aside class="menu-panel" id="menuPanel"><div class="menu-head"><span>SELECTED WORK</span><button class="menu-close" id="menuClose">CLOSE ×</button></div><div class="menu-projects" id="menuProjects"></div><div class="menu-links"><a href="#about">ABOUT</a><a href="mailto:hello@example.com">CONTACT</a></div></aside>
+<section class="intro" id="intro"><div class="stage" id="stage"><canvas id="c"></canvas><img id="heroLogo" class="hero-logo" src="ideas-fc-logo.svg" alt="Ideas FC"><div class="cue" id="cue">SWIPE / SCROLL</div></div></section>
+<section class="gallery" id="gallery"><div class="gallery-head">SELECTED WORK</div><div class="object-grid" id="grid"></div></section>
+<section class="case" id="case"><button class="case-close" id="caseClose">CLOSE ×</button><div class="case-inner"><header class="case-hero" id="caseHero"><div class="case-hero-shade"></div><div class="case-hero-copy"><h1 class="case-title" id="caseTitle"></h1><div class="case-client-hero" id="caseClientHero"></div><div class="case-kicker" id="caseKicker">01 / Campaign / Creative Direction</div></div></header><section class="case-intro"><div class="case-lead" id="caseLead">A clear, confident one-line description of the project and the creative opportunity.</div><div class="case-copy"><p>Case study content area. This build deliberately uses no object imagery inside the case study.</p><p>The layout follows the supplied case-study structure so project content can be added without changing the interaction system.</p><div class="facts"><div class="fact">Role<b>Creative Lead</b></div><div class="fact">Client<b id="caseClient"></b></div><div class="fact">Year<b>2026</b></div></div></div></section><div class="case-visual">HERO VISUAL</div><section class="case-story"><h2>The idea</h2><p>A simple thought with enough energy to travel across every touchpoint.</p></section><div class="case-split"><div>IMAGE / FILM</div><div>IMAGE / DETAIL</div></div><section class="case-story"><h2>The system</h2><p>One clear creative language, flexed across campaign, brand, motion and experience.</p></section><div class="case-visual">WIDE EXECUTION</div><section class="case-story case-impact"><h2>The impact</h2><p>Use this final section for results, response and what the work achieved.</p></section></div></section>
+<script>
+const projects=[{"title":"The Great Unwaste","client":"End Food Waste Australia","model":"apple.glb"},{"title":"Discover Your Sleep Super Powers","client":"ResMed","model":"alarm-clock.glb"},{"title":"Takeover Tomorrow","client":"Adobe","model":"computer.glb"},{"title":"It's Time to Play Better","client":"Park SSC","model":"soccer.glb"},{"title":"The Unfairest Cricket Match","client":"Massel","model":"cricket.glb"},{"title":"I'm Prep'd","client":"Aids Council of New South Wales","model":"underwear.glb"},{"title":"Scott Pizza","client":"Pizza Hut","model":"meat-pie.glb"},{"title":"CX Artist Series","client":"Converse","model":"converse.glb"},{"title":"3% P.A. Savings Account","client":"Westpac","model":"piggy-bank.glb"},{"title":"What Are You Really Driving","client":"Permaguard Anti Microbial Shield","model":"toilet.glb"},{"title":"Our Routes Grow Trees","client":"Warrington Borough Transport","model":"bus-stop.glb"},{"title":"Get Fit for the Galaxy","client":"Marvel","model":"star-lord_action_figure.glb"}];
+const $=s=>document.querySelector(s), clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const grid=$('#grid'),gallery=$('#gallery'),caseEl=$('#case'),topbar=$('#topbar'),menuPanel=$('#menuPanel');
+/* V20: 3D object cards removed; project index is injected after the legacy script. */
+const menuProjects=$('#menuProjects');projects.forEach((p,i)=>{const b=document.createElement('button');b.className='menu-row';b.innerHTML=`<span>${String(i+1).padStart(2,'0')}. ${p.title}</span><span>${p.client}</span>`;b.onclick=()=>{toggleMenu(false);openCase(i)};menuProjects.append(b)});const mt=$('#menuToggle'),mc=$('#menuClose');function toggleMenu(force){const on=force??!menuPanel.classList.contains('open');menuPanel.classList.toggle('open',on);mt.setAttribute('aria-expanded',on)}mt.onclick=()=>toggleMenu();mc.onclick=()=>toggleMenu(false);document.addEventListener('keydown',e=>{if(e.key==='Escape'){toggleMenu(false);if(caseEl.classList.contains('open'))closeCase()}});
+// Shared, lightweight object motion. Y-axis only: no top/bottom reveal and no scale changes.
+const objectStates=[];document.querySelectorAll('.object-card').forEach((card,i)=>{const mv=card.querySelector('model-viewer'),hit=card.querySelector('.hit');if(!mv)return;const st={mv,hit,i,drag:false,moved:false,startX:0,startY:0,theta:0,target:0,lastX:0,phase:i*.73};objectStates.push(st);hit.addEventListener('pointerdown',e=>{st.startX=st.lastX=e.clientX;st.startY=e.clientY;st.drag=false;st.moved=false});hit.addEventListener('pointermove',e=>{const dx=e.clientX-st.startX,dy=e.clientY-st.startY;if(!st.drag&&Math.abs(dx)>8&&Math.abs(dx)>Math.abs(dy)*1.15){st.drag=true;hit.setPointerCapture(e.pointerId)}if(st.drag){e.preventDefault();st.moved=true;st.theta+=(e.clientX-st.lastX)*.42;st.target=st.theta;st.lastX=e.clientX}else if(matchMedia('(hover:hover)').matches){const r=card.getBoundingClientRect(),nx=(e.clientX-r.left)/r.width-.5;st.target=nx*8}});hit.addEventListener('pointerup',e=>{if(st.drag){try{hit.releasePointerCapture(e.pointerId)}catch{}st.drag=false}else if(!st.moved&&Math.hypot(e.clientX-st.startX,e.clientY-st.startY)<8)openCase(+card.dataset.i)});hit.addEventListener('pointerleave',()=>{if(!st.drag)st.target=0});card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCase(+card.dataset.i)}})});
+function animateObjects(t){for(const st of objectStates){if(!st.drag){const idle=Math.sin(t*.00065+st.phase)*6;st.theta+=(st.target+idle-st.theta)*.035}st.mv.cameraOrbit=`${st.theta.toFixed(2)}deg 75deg auto`}requestAnimationFrame(animateObjects)}requestAnimationFrame(animateObjects);
+let galleryScroll=0;function openCase(i){const p=projects[i];galleryScroll=gallery.scrollTop;$('#caseTitle').textContent=p.title;$('#caseClient').textContent=p.client;$('#caseClientHero').textContent=p.client;$('#caseKicker').textContent=`${String(i+1).padStart(2,'0')} / Case Study / Creative Direction`;caseEl.scrollTop=0;caseEl.style.transform='';caseEl.classList.add('open');gallery.classList.add('gallery-under');menuPanel.classList.remove('open')}function finishCaseReturn(){caseEl.classList.remove('open','peeling');caseEl.style.transform='';gallery.classList.remove('gallery-under');gallery.scrollTop=galleryScroll}function closeCase(){caseEl.style.transition='transform .68s cubic-bezier(.22,.78,.18,1)';caseEl.style.transform='translateY(-105%)';setTimeout(finishCaseReturn,690)}$('#caseClose').onclick=closeCase;
+// V16: case studies no longer auto-peel at the bottom; CLOSE is the explicit return action.
+
+// Intro physics state machine: INTRO -> BALLS -> TRANSITION -> WORK.
+const intro=$('#intro'),stage=$('#stage'),heroLogo=$('#heroLogo'),canvas=$('#c'),ctx=canvas.getContext('2d'),cue=$('#cue'),img=new Image();img.src='ideas-fc-logo.svg';let W=0,H=0,DPR=1,balls=[],mask=[],phase='INTRO',transition=0,last=performance.now(),gravityX=0,gravityY=.34,touching=false,logoTurn=0,logoTurnTarget=0;
+function sampleMask(){const oc=document.createElement('canvas'),x=oc.getContext('2d');oc.width=240;oc.height=166;x.drawImage(img,0,0,240,166);const d=x.getImageData(0,0,240,166).data;mask=[];for(let y=0;y<166;y+=2)for(let xx=0;xx<240;xx+=2){const k=(y*240+xx)*4;if(d[k+3]>90)mask.push([xx/240,y/166])}}
+function resizePhysics(){const r=stage.getBoundingClientRect();DPR=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;canvas.width=W*DPR;canvas.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);if(phase==='INTRO')spawnBalls(false);else constrainBalls()}
+function spawnBalls(launch=true){const r=heroLogo.getBoundingClientRect(),sr=stage.getBoundingClientRect(),mobile=matchMedia('(max-width:700px)').matches,n=mobile?Math.min(50,Math.max(34,Math.round(W/8))):120;balls=[];for(let i=0;i<n;i++){const m=mask.length?mask[Math.floor(Math.random()*mask.length)]:[Math.random(),Math.random()],size=mobile?Math.max(29,Math.min(39,W*.085)):Math.max(30,Math.min(42,W*.034)),x=r.left-sr.left+m[0]*r.width,y=r.top-sr.top+m[1]*r.height;balls.push({x,y,bx:x,by:y,vx:launch?(Math.random()-.5)*9:0,vy:launch?(2+Math.random()*6):0,rot:Math.random()*6.28,vr:(Math.random()-.5)*.12,size,r:size*.35})}}
+function constrainBalls(){for(const b of balls){b.x=clamp(b.x,b.r,W-b.r);b.y=clamp(b.y,b.r,H-b.r)}}
+function collide(){
+  // Multiple solver passes keep the circular SVG bodies separated even in dense piles.
+  for(let pass=0;pass<7;pass++){
+    for(let i=0;i<balls.length;i++){const a=balls[i];
+      for(let j=i+1;j<balls.length;j++){const b=balls[j],dx=b.x-a.x,dy=b.y-a.y,rr=a.r+b.r,d2=dx*dx+dy*dy;
+        if(d2<rr*rr){
+          const d=Math.sqrt(d2)||.001,nx=d>.001?dx/d:Math.cos((i+j)*1.7),ny=d>.001?dy/d:Math.sin((i+j)*1.7),over=rr-d+.15;
+          a.x-=nx*over*.5;a.y-=ny*over*.5;b.x+=nx*over*.5;b.y+=ny*over*.5;
+          const sep=(b.vx-a.vx)*nx+(b.vy-a.vy)*ny;
+          if(sep<0){const restitution=.92,impulse=-(1+restitution)*sep*.5;a.vx-=impulse*nx;a.vy-=impulse*ny;b.vx+=impulse*nx;b.vy+=impulse*ny;}
+          // A tiny tangential transfer prevents dense stacks becoming a dead, compressed strip.
+          const tx=-ny,ty=nx,k=((b.vx-a.vx)*tx+(b.vy-a.vy)*ty)*.018;a.vx+=tx*k;a.vy+=ty*k;b.vx-=tx*k;b.vy-=ty*k;
+        }
+      }
+    }
+  }
+}
+function drawBall(b){ctx.save();ctx.translate(b.x,b.y);ctx.rotate(b.rot);const ar=img.naturalWidth/img.naturalHeight,h=b.size,w=h*ar;ctx.drawImage(img,-w/2,-h/2,w,h);ctx.restore()}
+function releaseBalls(){if(phase!=='ROTATING')return;logoTurn=360;heroLogo.style.transform='translate(-50%,-50%) rotate(360deg)';phase='BALLS';spawnBalls(true);heroLogo.style.opacity='0';heroLogo.style.visibility='hidden';cue.style.opacity='0'}
+function startLogoTurn(){if(phase!=='INTRO')return;phase='ROTATING';logoTurnTarget=360;cue.style.opacity='0'}
+function physicsStep(dt){
+  if(phase==='INTRO'||phase==='ROTATING')return;
+  const ceiling=0,floor=H*(1-transition);
+  for(const b of balls){
+    b.vx+=(touching?0:gravityX)*dt;b.vy+=(touching?.36:gravityY)*dt;
+    // Very low drag: the balls should remain energetic rather than settling after one bounce.
+    b.vx*=.9995;b.vy*=.9997;b.vx=clamp(b.vx,-15,15);b.vy=clamp(b.vy,-19,19);
+    b.x+=b.vx*dt;b.y+=b.vy*dt;b.rot+=b.vr*dt;
+    if(b.x-b.r<0){b.x=b.r;b.vx=Math.max(2.2,Math.abs(b.vx)*.9)}
+    if(b.x+b.r>W){b.x=W-b.r;b.vx=-Math.max(2.2,Math.abs(b.vx)*.9)}
+    if(b.y-b.r<ceiling){b.y=b.r;b.vy=Math.max(2.5,Math.abs(b.vy)*.88)}
+    if(b.y+b.r>floor){
+      b.y=floor-b.r;
+      const impact=Math.abs(b.vy);
+      b.vy=-Math.max(4.2,impact*.86);
+      b.vx+=((Math.random()-.5)*1.15);
+    }
+    // Keep a minimum amount of kinetic life at every point in the ball stage.
+    if(transition<.985&&b.y>H*.42&&Math.hypot(b.vx,b.vy)<3.4){b.vx+=(Math.random()-.5)*2.8;b.vy-=2.8+Math.random()*2.4}
+  }
+  collide();
+  // Re-clamp after collision resolution so no ball can be left beyond the visible side walls.
+  for(const b of balls){b.x=clamp(b.x,b.r,W-b.r);if(b.y+b.r>floor)b.y=floor-b.r}
+}
+function render(t){const dt=Math.min(1.8,(t-last)/16.67);last=t;ctx.clearRect(0,0,W,H);if(phase==='ROTATING'){logoTurn=Math.min(logoTurnTarget,logoTurn+8.5*dt);heroLogo.style.transform=`translate(-50%,-50%) rotate(${logoTurn}deg)`;if(logoTurn>=logoTurnTarget)releaseBalls()}physicsStep(dt);if(phase!=='INTRO'&&phase!=='ROTATING')for(const b of balls)drawBall(b);gallery.style.transform=`translateY(${(1-transition)*100}%)`;requestAnimationFrame(render)}
+img.onload=()=>{sampleMask();spawnBalls(false);resizePhysics()};addEventListener('resize',resizePhysics,{passive:true});requestAnimationFrame(render);
+// Desktop wheel/scroll maps smoothly to the same states.
+addEventListener('wheel',e=>{if(caseEl.classList.contains('open')||menuPanel.classList.contains('open'))return;if(phase==='INTRO'&&e.deltaY>0){e.preventDefault();if(typeof advanceIntroCopy==='function'){advanceIntroCopy(Math.min(Math.max(e.deltaY,0),90)*0.38)}else{startLogoTurn()}return}if(phase==='ROTATING'){e.preventDefault();return}if((phase==='BALLS'||phase==='TRANSITION')&&stage.style.visibility!=='hidden'){e.preventDefault();phase='TRANSITION';transition=clamp(transition+e.deltaY/900);if(transition>=.995){phase='WORK';transition=1;stage.style.visibility='hidden'}if(transition<=.001){phase='BALLS';transition=0}}},{passive:false});
+let sy=0,lastY=0,gesture='';stage.addEventListener('touchstart',e=>{if(e.touches.length!==1)return;sy=lastY=e.touches[0].clientY;gesture='';touching=true},{passive:true});stage.addEventListener('touchmove',e=>{if(e.touches.length!==1)return;const y=e.touches[0].clientY,dy=y-lastY,total=y-sy;if(!gesture&&Math.abs(total)>14)gesture=total<0?'up':'down';if(phase==='INTRO'){if(total<-8){e.preventDefault();if(typeof advanceIntroCopy==='function'){advanceIntroCopy(Math.min(Math.max(0,-dy),32)*0.52)}else if(total<-38){startLogoTurn()}sy=y}}else if(phase==='ROTATING'){e.preventDefault()}else if(phase==='BALLS'||phase==='TRANSITION'){e.preventDefault();phase='TRANSITION';transition=clamp(transition-dy/(H*1.35));if(transition<=.001)phase='BALLS';lastY=y}},{passive:false});stage.addEventListener('touchend',()=>{touching=false;if(phase!=='BALLS'&&phase!=='TRANSITION')return;if(transition>.88){transition=1;phase='WORK';stage.style.visibility='hidden'}else if(transition<.08){transition=0;phase='BALLS'}},{passive:true});
+// From the top of Work, a deliberate downward swipe returns to the transition/physics stage.
+let gy=0;gallery.addEventListener('touchstart',e=>{if(gallery.scrollTop<=1&&e.touches.length===1)gy=e.touches[0].clientY;else gy=0},{passive:true});gallery.addEventListener('touchmove',e=>{if(!gy||gallery.scrollTop>1)return;const d=e.touches[0].clientY-gy;if(d>18){e.preventDefault();stage.style.visibility='visible';phase='TRANSITION';transition=clamp(1-d/(H*.8));if(transition<.98)gallery.scrollTop=0}},{passive:false});gallery.addEventListener('touchend',()=>{gy=0;if(transition<.9){phase=transition<.05?'BALLS':'TRANSITION'}else{transition=1;phase='WORK';stage.style.visibility='hidden'}},{passive:true});gallery.addEventListener('wheel',e=>{if(gallery.scrollTop<=1&&e.deltaY<0){e.preventDefault();stage.style.visibility='visible';phase='TRANSITION';transition=clamp(transition+e.deltaY/900)}},{passive:false});
+
+</script>
+<style id="v20-selected-work-list">
+/* V20 — replace 3D object grid with editorial project index. Intro/physics + case studies remain intact. */
+html,body,a,button,[role="button"],.menu-row,.project-row,.case-close,.menu-close,.menu-toggle{cursor:url("ideas-fc-logo.svg") 8 8,auto!important}
+.object-grid{display:block!important;padding:0!important;min-height:calc(100dvh - 70px)!important;position:relative!important;background:#171717!important;color:#fff!important}
+.work-browser{position:relative;min-height:calc(100dvh - 70px);overflow:hidden;background:#171717}
+.work-bg,.work-bg-next{position:absolute;inset:0;background-position:center;background-size:cover;background-repeat:no-repeat;transition:opacity .38s ease,transform .7s cubic-bezier(.22,.78,.18,1);transform:scale(1.015);pointer-events:none}
+.work-bg{opacity:.72}.work-bg-next{opacity:0}.work-browser::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.16),rgba(0,0,0,.22) 45%,rgba(0,0,0,.76) 100%);pointer-events:none}
+.project-index{position:relative;z-index:3;width:min(42vw,610px);margin-left:auto;padding:6vh 4vw 8vh;min-height:calc(100dvh - 70px);display:flex;flex-direction:column;justify-content:center}
+.project-index-label{font-size:9px;letter-spacing:.08em;margin-bottom:18px;opacity:.62}
+.project-row{appearance:none;border:0;border-bottom:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;width:100%;padding:11px 0 10px;display:grid;grid-template-columns:42px 1fr;text-align:left;align-items:start;transition:color .18s,opacity .18s;outline:none}
+.project-row:first-of-type{border-top:1px solid rgba(255,255,255,.28)}
+.project-row .num{font-size:9px;line-height:1.35;opacity:.62}.project-row .project-name{font-size:clamp(12px,1.05vw,16px);line-height:1.12}.project-row .client{display:block;font-size:8px;line-height:1.25;margin-top:4px;opacity:.55}
+.project-row.active,.project-row:hover,.project-row:focus-visible{color:var(--acid)}
+.project-index:has(.project-row:hover) .project-row:not(:hover){opacity:.48}
+.case-close{position:fixed!important;z-index:1000!important;display:block!important;visibility:visible!important;opacity:1!important}
+@media(max-width:900px){
+ .object-grid{min-height:calc(100dvh - 58px)!important}.work-browser{min-height:calc(100dvh - 58px)}
+ .work-browser::after{background:linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.28) 42%,rgba(0,0,0,.86) 100%)}
+ .project-index{width:100%;margin:0;padding:35dvh 18px 48px;min-height:calc(100dvh - 58px);justify-content:flex-start}
+ .project-index-label{margin-bottom:12px}.project-row{grid-template-columns:36px 1fr;padding:12px 0}.project-row .project-name{font-size:13px}.project-row .client{font-size:8px}
+}
+@media(max-width:560px){
+ .gallery:not(.work-docked){overflow:hidden!important;touch-action:none!important}
+ .gallery.work-docked{overflow-y:auto!important;touch-action:pan-y!important}
+ .gallery:not(.work-docked) .object-grid{height:calc(100dvh - 58px)!important;overflow:hidden!important}
+ .work-browser{min-height:calc(100dvh - 58px)}
+}
+</style>
+<script id="v20-work-browser">
+(()=>{
+ const grid=document.getElementById('grid'); if(!grid||typeof projects==='undefined')return;
+ // Visuals are intentionally conventional image paths so Brendan can drop final hero JPG/WebP files into /project-images.
+ const visualNames=['great-unwaste','resmed-sleep','adobe-takeover','park-ssc','massel-cricket','prep','scott-pizza','converse-cx','westpac-savings','permaguard','warrington-routes','marvel-galaxy'];
+ projects.forEach((p,i)=>p.visual=`project-images/${visualNames[i]}.jpg`);
+ grid.innerHTML='<div class="work-browser"><div class="work-bg" aria-hidden="true"></div><div class="work-bg-next" aria-hidden="true"></div><div class="project-index"><div class="project-index-label">SELECTED WORK</div><div class="project-rows"></div></div></div>';
+ const browser=grid.querySelector('.work-browser'), rows=grid.querySelector('.project-rows'), bg=grid.querySelector('.work-bg'), next=grid.querySelector('.work-bg-next');
+ let active=-1, front=bg, back=next;
+ function setVisual(i,instant=false){
+   if(i===active)return; active=i;
+   grid.querySelectorAll('.project-row').forEach((r,n)=>r.classList.toggle('active',n===i));
+   back.style.backgroundImage=`url("${projects[i].visual}")`;
+   if(instant){front.style.backgroundImage=back.style.backgroundImage;front.style.opacity='.72';back.style.opacity='0';return}
+   back.style.opacity='.72'; front.style.opacity='0';
+   setTimeout(()=>{const t=front;front=back;back=t;back.style.opacity='0'},390);
+ }
+ projects.forEach((p,i)=>{
+   const b=document.createElement('button'); b.className='project-row'; b.type='button';
+   b.innerHTML=`<span class="num">[${String(i+1).padStart(3,'0')}]</span><span><span class="project-name">${p.title}</span><small class="client">${p.client}</small></span>`;
+   b.addEventListener('mouseenter',()=>setVisual(i)); b.addEventListener('focus',()=>setVisual(i)); b.addEventListener('click',()=>openCase(i));
+   rows.appendChild(b);
+ });
+ setVisual(0,true);
+ // Touch/mobile: background follows the row nearest the viewport's active reading line after Work has docked.
+ function mobileActive(){if(innerWidth>900||!gallery.classList.contains('work-docked'))return;const line=innerHeight*.56;let best=0,dist=1e9;[...rows.children].forEach((r,i)=>{const q=r.getBoundingClientRect(),d=Math.abs((q.top+q.bottom)/2-line);if(d<dist){dist=d;best=i}});setVisual(best)}
+ gallery.addEventListener('scroll',mobileActive,{passive:true});addEventListener('resize',mobileActive,{passive:true});
+ // Strong mobile lock: incoming Selected Work is one rigid module; internal scrolling begins only after docking.
+ let startY=0,lastY=0;
+ gallery.addEventListener('touchstart',e=>{if(e.touches.length!==1)return;if(!gallery.classList.contains('work-docked')){startY=lastY=e.touches[0].clientY;gallery.scrollTop=0}}, {passive:true});
+ gallery.addEventListener('touchmove',e=>{if(gallery.classList.contains('work-docked')||!startY)return;gallery.scrollTop=0;lastY=e.touches[0].clientY},{passive:true});
+ gallery.addEventListener('touchend',()=>{startY=lastY=0},{passive:true});
+})();
+</script>
+
+<style id="v22-mobile-hard-fix">
+@media(max-width:700px){
+.gallery{position:fixed!important;top:var(--nav-h)!important;left:0!important;right:0!important;bottom:0!important;height:calc(100dvh - var(--nav-h))!important;overflow:hidden!important;overscroll-behavior:none!important;-webkit-overflow-scrolling:auto!important}
+.gallery.work-docked{overflow-y:auto!important;overflow-x:hidden!important;overscroll-behavior-y:contain!important;-webkit-overflow-scrolling:touch!important}
+body.mobile-after-logo .hero-logo{display:none!important;opacity:0!important;visibility:hidden!important}
+}
+</style>
+<script id="v22-mobile-hard-fix-script">
+(()=>{
+ const g=document.getElementById('gallery'),st=document.getElementById('stage');
+ if(!g||!st)return;
+ let start=0,last=0,owner='',handled=false;
+ document.addEventListener('touchstart',e=>{
+   if(e.touches.length!==1||caseEl.classList.contains('open')||menuPanel.classList.contains('open')){owner='';return}
+   start=last=e.touches[0].clientY;handled=false;
+   owner=(phase==='INTRO'||phase==='ROTATING'||phase==='BALLS'||phase==='TRANSITION')?'intro':(phase==='WORK'&&g.scrollTop<=1?'worktop':'');
+ },{capture:true,passive:true});
+ document.addEventListener('touchmove',e=>{
+   if(!owner||e.touches.length!==1)return;
+   const y=e.touches[0].clientY,dy=y-last,total=y-start;last=y;
+   if(owner==='intro'){
+     if(phase==='INTRO'&&dy<0){e.preventDefault();e.stopImmediatePropagation();window.advanceIntroCopy?.(Math.min(-dy,32)*0.52)}
+     else if(phase==='ROTATING'){e.preventDefault();e.stopImmediatePropagation()}
+     else if(phase==='BALLS'||phase==='TRANSITION'){
+       e.preventDefault();e.stopImmediatePropagation();phase='TRANSITION';transition=clamp(transition-dy/(H*.92));
+       if(transition>=.999){transition=1;phase='WORK';g.classList.add('work-docked');g.scrollTop=0;st.style.visibility='hidden'}
+       else if(transition<=.001){transition=0;phase='BALLS'}
+     }
+   }else if(owner==='worktop'&&total>10){
+     e.preventDefault();e.stopImmediatePropagation();handled=true;g.classList.remove('work-docked');g.scrollTop=0;
+     st.style.visibility='visible';phase='TRANSITION';transition=clamp(1-total/(H*.92));
+   }
+ },{capture:true,passive:false});
+ document.addEventListener('touchend',()=>{
+   if(owner==='intro'&&phase==='TRANSITION'&&transition>.985){transition=1;phase='WORK';g.classList.add('work-docked');st.style.visibility='hidden'}
+   if(owner==='worktop'&&handled){if(transition>.94){transition=1;phase='WORK';g.classList.add('work-docked');st.style.visibility='hidden'}else if(transition<.02){transition=0;phase='BALLS'}}
+   owner='';handled=false;
+ },{capture:true,passive:true});
+})();
+</script>
+
+<style id="v23-agreed">
+@media(hover:hover) and (pointer:fine){html,body,body *{cursor:none!important}#ideasCursor{position:fixed;left:0;top:0;width:16px;height:16px;z-index:99999;pointer-events:none;will-change:transform}}
+.case-close{position:fixed!important;top:calc(var(--nav-h) + 12px)!important;right:14px!important;z-index:9990!important;display:block!important;visibility:visible!important;opacity:1!important}
+.v23-browser{position:relative;min-height:100%;background:var(--paper)}
+.v23-desktop{position:relative;min-height:calc(100dvh - var(--nav-h) - 70px);overflow:hidden;background:#171717}
+.v23-bg{position:absolute;inset:0;background:center/cover no-repeat;opacity:0;transition:opacity .4s ease}.v23-bg.active{opacity:1}
+.v23-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.05),rgba(0,0,0,.58))}
+.v23-list{position:relative;z-index:3;margin-left:auto;width:min(48vw,720px);min-height:calc(100dvh - var(--nav-h) - 70px);padding:5vh 4vw;color:#fff;display:flex;flex-direction:column;justify-content:center}
+.v23-row{display:grid;grid-template-columns:42px 1fr;gap:10px;padding:10px 0;border:0;border-bottom:1px solid rgba(255,255,255,.28);background:none;color:inherit;text-align:left}
+.v23-row .n{font-size:9px;opacity:.55}.v23-row .t{font-size:clamp(14px,1.45vw,23px);line-height:1.02;text-transform:uppercase}.v23-row .c{display:block;font-size:8px;margin-top:4px;opacity:.6;text-transform:uppercase}.v23-row.active .t{color:var(--acid)}
+.v23-mobile{display:none}
+@media(max-width:700px){
+ .v23-desktop{display:none}.v23-mobile{display:block;padding:14px 14px 72px}
+ .v23-tile{position:relative;width:100%;height:80dvh;min-height:500px;max-height:760px;margin-bottom:16px;overflow:hidden;background:#222}
+ .v23-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.v23-tile:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.74))}
+ .v23-meta{position:absolute;z-index:2;left:18px;right:18px;bottom:20px;color:#fff}.v23-meta .n{font-size:8px;margin-bottom:8px}.v23-meta .t{font-size:clamp(20px,6.4vw,31px);line-height:.96;text-transform:uppercase;max-width:14ch}.v23-meta .c{font-size:9px;margin-top:8px;text-transform:uppercase;opacity:.75}
+ .gallery{position:fixed!important;top:var(--nav-h)!important;left:0!important;right:0!important;bottom:0!important;height:calc(100dvh - var(--nav-h))!important;overflow:hidden!important;overscroll-behavior:none!important}
+ .gallery.work-docked{overflow-y:auto!important;overflow-x:hidden!important;-webkit-overflow-scrolling:touch!important;overscroll-behavior-y:contain!important}
+ body.v23-postlogo .hero-logo{display:none!important;opacity:0!important;visibility:hidden!important}
+}
+</style><script id="v23-agreed-js">
+(()=>{
+ const g=document.getElementById('gallery'),old=document.getElementById('grid'),logo=document.getElementById('heroLogo'),st=document.getElementById('stage');
+ if(!g||!old||typeof projects==='undefined')return;
+ const imgs=['great-unwaste.jpg','resmed-sleep.jpg','adobe-takeover.jpg','park-ssc.jpg','massel-cricket.jpg','prep.jpg','scott-pizza.jpg','converse-cx.jpg','westpac-savings.jpg','permaguard.jpg','warrington-routes.jpg','marvel-galaxy.jpg'].map(x=>'project-images/'+x);
+ const browser=document.createElement('div');browser.className='v23-browser';
+ const desk=document.createElement('div');desk.className='v23-desktop';const bgbox=document.createElement('div'),shade=document.createElement('div'),list=document.createElement('div');shade.className='v23-shade';list.className='v23-list';const bgs=[];
+ projects.forEach((p,i)=>{const bg=document.createElement('div');bg.className='v23-bg'+(i?'':' active');bg.style.backgroundImage=`url("${imgs[i]}")`;bgbox.append(bg);bgs.push(bg);
+ const r=document.createElement('button');r.className='v23-row'+(i?'':' active');r.innerHTML=`<span class="n">[${String(i+1).padStart(3,'0')}]</span><span><span class="t">${p.title}</span><span class="c">${p.client}</span></span>`;
+ const a=()=>{bgs.forEach((x,j)=>x.classList.toggle('active',j===i));list.querySelectorAll('.v23-row').forEach((x,j)=>x.classList.toggle('active',j===i))};r.onmouseenter=a;r.onfocus=a;r.onclick=()=>openCase(i);list.append(r)});
+ desk.append(bgbox,shade,list);
+ const mob=document.createElement('div');mob.className='v23-mobile';
+ projects.forEach((p,i)=>{const t=document.createElement('article');t.className='v23-tile';t.tabIndex=0;t.innerHTML=`<img src="${imgs[i]}" alt=""><div class="v23-meta"><div class="n">[${String(i+1).padStart(3,'0')}]</div><div class="t">${p.title}</div><div class="c">${p.client}</div></div>`;t.onclick=()=>openCase(i);t.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCase(i)}};mob.append(t)});
+ browser.append(desk,mob);old.replaceWith(browser);
+
+ if(matchMedia('(hover:hover) and (pointer:fine)').matches){const c=document.createElement('img');c.id='ideasCursor';c.src='ideas-fc-cursor.svg';c.alt='';document.body.append(c);let tx=innerWidth/2,ty=innerHeight/2,x=tx,y=ty,seen=false;addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;seen=true},{passive:true});(function tick(){x+=(tx-x)*.16;y+=(ty-y)*.16;if(seen)c.style.transform=`translate3d(${x-8}px,${y-8}px,0)`;requestAnimationFrame(tick)})()}
+
+ if(matchMedia('(max-width:700px)').matches){
+   let sy=0,back=false;
+   const hide=()=>{document.body.classList.add('v23-postlogo');if(logo){logo.style.display='none';logo.style.opacity='0';logo.style.visibility='hidden'}};
+   (function guard(){if(['BALLS','TRANSITION','WORK'].includes(phase))hide();if(phase==='WORK'&&transition>=.999){if(!g.classList.contains('work-docked')){g.classList.add('work-docked');g.scrollTop=0}}else if(transition<.999&&g.classList.contains('work-docked')){g.classList.remove('work-docked');g.scrollTop=0}requestAnimationFrame(guard)})();
+   g.addEventListener('touchstart',e=>{sy=(e.touches.length===1&&g.classList.contains('work-docked')&&g.scrollTop<=1)?e.touches[0].clientY:0;back=false},{capture:true,passive:true});
+   g.addEventListener('touchmove',e=>{if(!sy||g.scrollTop>1)return;const d=e.touches[0].clientY-sy;if(d>10){e.preventDefault();e.stopImmediatePropagation();back=true;g.classList.remove('work-docked');g.scrollTop=0;st.style.visibility='visible';phase='TRANSITION';transition=Math.max(0,Math.min(1,1-d/(H*.82)));g.style.transform=`translateY(${(1-transition)*100}%)`;hide()}},{capture:true,passive:false});
+   g.addEventListener('touchend',()=>{if(back){if(transition>.92){transition=1;phase='WORK';g.style.transform='translateY(0)';g.classList.add('work-docked');st.style.visibility='hidden'}else if(transition<.05){transition=0;phase='BALLS';g.style.transform='translateY(100%)';st.style.visibility='visible'}}sy=0;back=false},{capture:true,passive:true});
+ }
+})();
+</script>
+<style id="v24-final-refinements">
+/* HEADER: 150px Ideas FC SVG + two-line identity. Entire lockup is Home. */
+.topbar{padding-left:24px!important}
+.v24-home{
+  pointer-events:auto;display:flex;align-items:center;gap:18px;height:100%;
+  border:0;background:none;padding:0;text-align:left;color:inherit;text-decoration:none;
+}
+.v24-home-logo{display:block;width:150px;height:auto;max-height:42px;object-fit:contain;object-position:left center}
+.v24-home-copy{display:flex;flex-direction:column;justify-content:center}
+.v24-home-name{font-size:11px;line-height:1.1;font-weight:700;letter-spacing:.01em}
+.v24-home-title{font-size:9px;line-height:1.2;margin-top:4px;font-weight:400;letter-spacing:.01em}
+.topbar>.identity{display:none!important}
+
+/* DESKTOP SELECTED WORK: no overlay, compact one-line editorial list. */
+@media(min-width:701px){
+  .v23-desktop{background:#111}
+  .v23-shade{display:none!important}
+  .v23-bg{transition:none!important;opacity:0}
+  .v23-bg.active{opacity:1}
+  .v23-list{
+    width:auto!important;
+    min-width:430px;
+    max-width:min(48vw,680px);
+    min-height:0!important;
+    position:absolute!important;
+    left:6.8vw!important;
+    right:auto!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    margin:0!important;
+    padding:0!important;
+    display:block!important;
+    color:#fff;
+  }
+  .v23-row{
+    display:block!important;
+    width:100%;
+    padding:2px 0!important;
+    border:0!important;
+    background:none!important;
+    white-space:nowrap;
+    line-height:1.15;
+    text-align:left;
+  }
+  .v23-row .n,
+  .v23-row .t,
+  .v23-row .c{
+    display:inline!important;
+    font-size:11px!important;
+    line-height:1.15!important;
+    letter-spacing:0!important;
+    text-transform:none!important;
+    opacity:1!important;
+    margin:0!important;
+    padding:0!important;
+    color:inherit;
+  }
+  .v23-row .n{margin-right:7px!important}
+  .v23-row .c:before{content:" — "}
+  .v23-row.active,
+  .v23-row.active .n,
+  .v23-row.active .t,
+  .v23-row.active .c{color:var(--acid)!important}
+}
+
+/* Mobile header stays usable: smaller header logo, same two-line lockup. */
+@media(max-width:700px){
+  .topbar{padding:0 14px!important}
+  .v24-home{gap:10px;max-width:calc(100vw - 58px)}
+  .v24-home-logo{width:72px;max-height:34px}
+  .v24-home-name{font-size:10px}
+  .v24-home-title{font-size:7px;margin-top:3px;white-space:nowrap}
+}
+</style>
+
+<script id="v24-final-refinements-js">
+(()=>{
+  const topbar=document.getElementById('topbar');
+  const identity=topbar?.querySelector('.identity');
+  const gallery=document.getElementById('gallery');
+  const caseEl=document.getElementById('case');
+  const stage=document.getElementById('stage');
+  const heroLogo=document.getElementById('heroLogo');
+  if(!topbar||!identity||!gallery||!stage||!heroLogo)return;
+
+  /* Add requested 150px SVG brand mark + revised titles. */
+  const home=document.createElement('button');
+  home.className='v24-home';
+  home.type='button';
+  home.setAttribute('aria-label','Back to start');
+  home.innerHTML=`<img class="v24-home-logo" src="ideas-fc-logo.svg" alt="">
+    <span class="v24-home-copy">
+      <span class="v24-home-name">BRENDAN MCGOVERN</span>
+      <span class="v24-home-title">CREATIVE LEAD + ART DIRECTOR + DESIGNER</span>
+    </span>`;
+  topbar.insertBefore(home,identity);
+
+  /* Home means the literal beginning: close overlays, reset work, restore opening logo. */
+  home.addEventListener('click',()=>{
+    try{ if(caseEl?.classList.contains('open')) finishCaseReturn(); }catch(e){}
+    try{ toggleMenu(false); }catch(e){}
+    gallery.classList.remove('work-docked','gallery-under');
+    gallery.scrollTop=0;
+    transition=0;
+    phase='INTRO';
+    stage.style.visibility='visible';
+    gallery.style.transform='translateY(100%)';
+    document.body.classList.remove('v23-postlogo','v23-work','v23-balls','mobile-balls','mobile-work');
+    heroLogo.style.removeProperty('display');
+    heroLogo.style.removeProperty('visibility');
+    heroLogo.style.removeProperty('opacity');
+    heroLogo.style.transform='translate(-50%,-50%) rotate(0deg)';
+    logoTurn=0; logoTurnTarget=0;
+    cue.style.opacity='1';
+    try{spawnBalls(false)}catch(e){}
+    window.scrollTo(0,0);
+  });
+
+  /* Convert desktop rows to one-line [001] Project — Brand while retaining click/open behavior.
+     Hover/background switch remains immediate because V24 removes the previous fade transition. */
+  const rows=[...document.querySelectorAll('.v23-row')];
+  rows.forEach((row,i)=>{
+    const p=projects[i];
+    if(!p)return;
+    row.innerHTML=`<span class="n">[${String(i+1).padStart(3,'0')}]</span><span class="t">${p.title}</span><span class="c">${p.client}</span>`;
+  });
+})();
+</script>
+
+
+<style id="v25-intro-copy-selected-work">
+/* V29 — word-by-word reveal; every letter follows one continuous circular spiral. */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.gallery-head{display:none!important}
+.v23-browser,.v23-desktop{min-height:100%!important;height:100%!important}
+@media(min-width:701px){
+  .v23-list{max-width:min(68vw,1120px)!important}
+  .v23-list:before{content:"SELECTED WORK";display:block;font-size:18px;line-height:1.1;font-weight:400;margin:0 0 18px;color:#fff;letter-spacing:0}
+  .v23-row .n,.v23-row .t,.v23-row .c{font-size:14px!important;line-height:1.2!important}
+  .v23-row{padding:3px 0!important}
+}
+.intro-copy-sequence{position:absolute;inset:0;z-index:6;pointer-events:none;overflow:hidden;color:#050505;text-transform:uppercase}
+.spiral-letter{position:absolute;left:50%;top:50%;font-family:'Anton','Arial Narrow',Impact,sans-serif;font-weight:400;line-height:1;letter-spacing:0;white-space:pre;transition:opacity .16s ease-out;transform-origin:50% 50%;will-change:transform,opacity,filter;opacity:0}
+@media(prefers-reduced-motion:reduce){.spiral-letter{filter:none!important;transition:none!important}}
+@media(max-width:700px){.hero-logo{width:min(44vw,30dvh)!important}}
+</style>
+<script id="v25-intro-copy-selected-work-js">
+(()=>{
+ const stage=document.getElementById('stage'),logo=document.getElementById('heroLogo'),cue=document.getElementById('cue');
+ if(!stage||!logo)return;
+ const WORDS=['CREATE','IDEAS','SO','UNEXPECTED','AND','POWERFUL','THEY','DON’T','JUST','CATCH','THE','EYE','BUT','HIJACK','THE','BRAIN','AND','EXPLODE','IN','THE','MIND'];
+ const copy=document.createElement('div');copy.className='intro-copy-sequence';copy.setAttribute('aria-hidden','true');stage.appendChild(copy);
+ const chars=[];WORDS.forEach((word,wi)=>[...word].forEach((ch,ci)=>{const el=document.createElement('span');el.className='spiral-letter';el.textContent=ch;copy.appendChild(el);chars.push({el,wi,ci,ch})}));
+ const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+ const ease=v=>1-Math.pow(1-clamp(v),3);
+ const context=document.createElement('canvas').getContext('2d');
+ window.introCopyProgress=0;
+ function layout(){
+   const sr=stage.getBoundingClientRect(),W=sr.width,H=sr.height,mobile=W<=700;
+   if(!W||!H)return;
+   // Genuine inward-contracting spiral, with no repeated per-word angles.
+   // The outermost sweep remains screen-sized; the inner end clears the logo.
+   const logoRadius=Math.min(logo.offsetWidth,logo.offsetHeight||logo.offsetWidth)/2;
+   const outer=mobile?Math.min(W*.475,H*.40):Math.min(W*.46,H*.465);
+   const inner=Math.min(outer*.70,logoRadius+(mobile?13:23));
+   const turns=mobile?1.72:2.10,sweep=turns*Math.PI*2;
+   const theta0=-Math.PI*.56;
+   const exponent=1.48; // ring pitch contracts continuously toward the centre
+   const radius=t=>inner+(outer-inner)*Math.pow(1-t,exponent);
+   const steps=1800,arc=new Float64Array(steps+1);let px=outer*Math.cos(theta0),py=outer*Math.sin(theta0);
+   for(let i=1;i<=steps;i++){
+     const t=i/steps,theta=theta0+t*sweep,r=radius(t),x=r*Math.cos(theta),y=r*Math.sin(theta);
+     arc[i]=arc[i-1]+Math.hypot(x-px,y-py);px=x;py=y;
+   }
+   const len=arc[steps];
+   const fontAt=t=>mobile?(12+25*Math.pow(1-t,1.18)):(19+91*Math.pow(1-t,1.24));
+   const advanceAt=(ch,t)=>{const fs=fontAt(t);context.font=`${fs}px Anton, Impact, sans-serif`;return Math.max(fs*.28,context.measureText(ch).width)+10};
+   // Solve positions along *one* path by glyph width, rather than distributing words by index.
+   const segments=[];let guess=0;
+   for(const [wi,word] of WORDS.entries()){
+     for(const ch of word){const t=clamp(guess/len);const w=advanceAt(ch,t);segments.push({wi,ch,advance:w});guess+=w}
+     if(wi<WORDS.length-1){const w=fontAt(clamp(guess/len))*.68;segments.push({gap:true,advance:w});guess+=w}
+   }
+   for(let pass=0;pass<5;pass++){
+     let at=0;for(const item of segments){const t=clamp((at+item.advance*.5)/Math.max(guess,1));item.advance=item.gap?fontAt(t)*.68:advanceAt(item.ch,t);at+=item.advance}guess=at;
+   }
+   const fit=Math.min(1,len/Math.max(guess,1)*.965);
+   let cursor=Math.max(0,(len-guess*fit)*.12),charIndex=0;
+   const visible=window.introCopyProgress*WORDS.length;
+   for(const item of segments){
+     const middle=cursor+item.advance*fit*.5;cursor+=item.advance*fit;
+     if(item.gap)continue;
+     let lo=0,hi=steps;while(lo<hi){const mid=(lo+hi)>>1;if(arc[mid]<middle)lo=mid+1;else hi=mid}
+     const t=clamp(lo/steps),theta=theta0+t*sweep,r=radius(t);
+     const tangent=theta+Math.PI/2;
+     const el=chars[charIndex++].el;
+     const reveal=ease(visible-item.wi);
+     // Fixed position: only opacity changes during reveal.
+     el.style.fontSize=(fontAt(t)*fit)+'px';
+     el.style.opacity=String(reveal);
+     el.style.filter='none';
+     el.style.transform=`translate(-50%,-50%) translate(${Math.cos(theta)*r}px,${Math.sin(theta)*r}px) rotate(${tangent}rad)`;
+   }
+   copy.style.opacity=phase==='INTRO'?'1':'0';
+ }
+ let ending=false;
+ window.advanceIntroCopy=function(delta){
+   if(phase!=='INTRO'||ending)return;
+   window.introCopyProgress=clamp(window.introCopyProgress+Math.max(0,delta)/(WORDS.length*135));
+   if(cue)cue.style.opacity=window.introCopyProgress>.015?'0':'1';
+   layout();
+   if(window.introCopyProgress>=.999){ending=true;setTimeout(()=>{if(phase==='INTRO'){copy.style.opacity='0';startLogoTurn()}ending=false},1800)}
+ };
+ addEventListener('resize',layout,{passive:true});if(document.fonts?.ready)document.fonts.ready.then(layout);layout();
+ let previous=phase;
+ (function watch(){if(previous!=='INTRO'&&phase==='INTRO'){window.introCopyProgress=0;ending=false;if(cue)cue.style.opacity='1';layout()}if(phase!=='INTRO')copy.style.opacity='0';previous=phase;requestAnimationFrame(watch)})();
+})();
+</script>
+
+<style id="portfolio-assets-20261017">
+.case-hero.has-project-image::before{display:none!important}.case-hero.has-project-image{background-position:center;background-size:cover}.case-inner .portfolio-body{padding:clamp(36px,6vw,100px) 4vw;max-width:1100px}.portfolio-body p{font-size:clamp(17px,2.15vw,27px);line-height:1.4;max-width:840px;margin:0 0 22px}.portfolio-body h2{font-size:12px;letter-spacing:.1em;margin:45px 0 16px}.portfolio-media{padding:0 4vw 5vw}.portfolio-media img{display:block;width:100%;height:auto;max-height:1000px;object-fit:contain;margin:0 0 16px;background:#e5e2da}.portfolio-video{aspect-ratio:16/9;background:#1b1b1b;color:#dfff00;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;margin-bottom:20px;font-size:12px;letter-spacing:.1em;text-align:center}.portfolio-video .play{font-size:64px;line-height:1}.portfolio-missing{background:#dedbd2;color:#555;min-height:40vh;display:grid;place-items:center;font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px}.portfolio-impact{padding:6vw 4vw;background:var(--acid);font-size:clamp(20px,3vw,42px);line-height:1.2}.portfolio-impact h2{font-size:12px;letter-spacing:.1em}.portfolio-impact p{max-width:900px}.portfolio-awards{padding:5vw 4vw}.portfolio-awards h2{font-size:12px;letter-spacing:.1em}.portfolio-awards p{font-size:clamp(14px,1.5vw,20px);line-height:1.5}.v23-bg.asset-fallback{background-color:#282828}.v23-tile img{background:#292929}@media(max-width:700px){.portfolio-body{padding:44px 18px!important}.portfolio-media{padding:0 18px 32px}.portfolio-impact,.portfolio-awards{padding:50px 18px}.case-hero{min-height:48dvh}}
+</style>
+<script id="portfolio-assets-integration">(()=>{
+const catalog=[{"brand": "ResMed", "title": "Discover Your Sleep Superpowers", "copy": "Sleep is broken. We created a global campaign showing how better sleep can make you feel superhuman.", "results": "1.8 million website visitors. 1.6 million TVC impressions. 2.2 million social views. Sleep assessment targets exceeded by 150%.", "images": ["assets/p01/imgi_16_9804ace7-0081-43fe-b376-909baadb0658.jpg", "assets/p01/imgi_17_9804ace7-0081-43fe-b376-909baadb0658_rw_1920.jpg", "assets/p01/imgi_24_4cf8014f-e782-4e1a-a962-afdea2e95e45.jpg", "assets/p01/imgi_28_ffe887aa-3c50-4fd0-bbc3-62fe3bac8351_rw_1920.jpg", "assets/p01/imgi_31_df39560e-1824-48a4-bd07-a1543898ed69.jpg", "assets/p01/imgi_36_257aaff6-ea28-4bcf-98ac-d2f64d00c4f6_rw_1920.gif"], "paragraphs": ["Sleep is broken. Four in ten people get fewer than three good nights a week, while the internet is flooded with gimmicks promising a better night’s rest.", "To cut through the noise, we created Discover Your Sleep Superpowers, a global campaign showing how better sleep can make you feel superhuman.", "Led by a playful TVC starring a goldfish, the campaign combined generative AI, interactive experiences and personalised storytelling across 12 markets and 8 languages."], "awards": ["The Drum Awards — Bronze, Healthcare and Pharma", "The Telly Awards — Silver, Direction", "The Telly Awards — Silver, Cinematography"]}, {"brand": "PARK", "title": "It’s Time to Play Better", "copy": "96% of women have worn a men’s kit. We launched a campaign giving female footballers a voice and demanding change.", "results": "71 million earned media impressions. 754,000 social impressions. An 86% increase in website traffic. Kit sales exceeding targets and a new partnership with Sam Kerr Football.", "images": ["assets/p02/imgi_20_cc6db727-7048-46a2-85a9-0cc1fd9a8b46_rw_1200.jpg", "assets/p02/imgi_22_e5cb3abf-2bae-4542-9723-2897726c0069_rw_1200.jpg", "assets/p02/imgi_24_8061abaf-573c-47e2-88f0-23248ced08df_rw_1200.jpg"], "paragraphs": ["96% of women have worn a men’s kit at some point in their football career. Yet despite the growing popularity of women’s football, the issue was being overlooked.", "Together with PARK, we launched It’s Time to Play Better, a campaign challenging the inequality and giving female footballers a voice.", "Led by A-League player Emma Illjoski, the campaign shared real stories, rallied grassroots support and demanded change."], "awards": ["The Drum Awards — Chair’s Award", "The Drum Awards — Gold, Disruption", "The Drum Awards — Silver, Sport", "Shorty Impact Awards — Gold, Gender Equality", "Mumbrella CommsCon Awards — Best Campaign with a Small Budget"]}, {"brand": "Adobe", "title": "Takeover Tomorrow", "copy": "We challenged young creatives to push the boundaries of Adobe Firefly and reimagine the world around them.", "results": "51.1 million interactions. 44.3 million video views. Campaign performance exceeding previous benchmarks by 612%.", "images": ["assets/p03/imgi_21_e2d2b816-443d-4ec8-824c-9806b275bfd9.gif", "assets/p03/imgi_23_108ebf36-d85e-4e2d-8b76-53196477ce16.jpg", "assets/p03/imgi_27_53bef082-0872-413a-a248-84307b935989.gif", "assets/p03/imgi_30_53bef082-0872-413a-a248-84307b935989_rw_1200.gif", "assets/p03/imgi_31_b2fc89be-cbc0-442c-b8e3-0d47f0119d15.jpg"], "paragraphs": ["AI was changing creativity, and Adobe needed to show a new generation of creatives that the future was theirs to shape.", "We launched Takeover Tomorrow, a campaign challenging young creatives to push the boundaries of Adobe Firefly and reimagine the world around them.", "From disrupting online tutorials to showcasing bold creative visions, the campaign culminated in a global panel at Adobe MAX 2023."]}, {"brand": "Massel", "title": "The Unfairest Match", "copy": "We staged a deliberately one-sided cricket game featuring Glenn McGrath to spotlight the struggle of Australian-owned brands.", "results": "192 pieces of media coverage. 1.1 million impressions. Thousands of petition signatures and a parliamentary debate.", "images": ["assets/p04/imgi_18_45177275-e842-4347-81e8-facdcf7fefd4.jpg", "assets/p04/imgi_20_711069f7-6700-443f-9506-761ff98c3993.jpg", "assets/p04/imgi_25_231f0f00-d993-4991-a224-7805899ffb71_rw_1200.jpg", "assets/p04/imgi_28_a044ed88-1266-48ad-bc19-29ae0cfe95a7_rw_1920.jpg", "assets/p04/imgi_31_4358ab66-7088-4226-bcce-eadd6232ce44.jpg", "assets/p04/imgi_34_4358ab66-7088-4226-bcce-eadd6232ce44_rw_1200.jpg", "assets/p04/imgi_35_ed0f817b-144c-47a4-8558-399bccff1e7a.jpg", "assets/p04/imgi_39_7f8f2be7-94be-4796-9ab4-37346f7e813c.jpg", "assets/p04/imgi_43_2f2b28f1-4c9d-4095-ae82-82aa2cb9278e.jpg", "assets/p04/imgi_47_9dd57a40-f24a-42c2-abeb-f3e243439add.jpg", "assets/p04/imgi_50_44801519-c270-4554-a40d-72c1b644ed48.jpg", "assets/p04/imgi_54_9600fdf1-b309-43e2-963f-e34a384aee4a.jpg", "assets/p04/imgi_58_aa04c87e-3f8d-456a-9899-fc17f97e386a.jpg", "assets/p04/imgi_62_1dcbb2ce-3a1e-4c3d-8adb-0d791c95ccf0.jpg", "assets/p04/imgi_63_1dcbb2ce-3a1e-4c3d-8adb-0d791c95ccf0_rw_1200.jpg", "assets/p04/imgi_65_8901db61-8b85-4099-ad8b-53bf31012e37.jpg", "assets/p04/imgi_74_42d9fc8c-d983-49e5-b908-cd4c084b4251_carw_202x158x5120.jpg"], "paragraphs": ["Australian-owned brands are fighting an unfair battle for space on supermarket shelves. So we decided to make the unfairness impossible to ignore.", "Together with Massel and Australian Owned, we staged The Unfairest Match, a deliberately one-sided cricket game featuring Australian cricket legend Glenn McGrath.", "The campaign rallied public support and took the fight all the way to Parliament."]}, {"brand": "Emen8", "title": "Making HIV Prevention Part of Everyday Life", "copy": "A campaign to raise awareness of PrEP and make HIV prevention part of everyday life.", "results": "", "images": ["assets/p05/imgi_22_3825e4d5-3716-46c4-bacb-32101fcfa538.jpg", "assets/p05/imgi_24_fe2aadbe-86e5-4e3b-b42f-d3faaff676ee.jpg", "assets/p05/imgi_26_b702c0a1-8f74-4dff-baf1-30af71b36e4b.jpg", "assets/p05/imgi_36_68169729-e721-4f2e-9e18-a5b850002997.jpg"], "paragraphs": ["Emen8 is a sexual health and wellbeing initiative supporting gay, bisexual and other men who have sex with men.", "Our campaign aimed to raise awareness of PrEP, a highly effective HIV prevention medication that can reduce the risk of acquiring HIV through sex by around 99% when taken as prescribed.", "By positioning PrEP as a simple part of everyday life, we encouraged greater awareness, understanding and uptake of HIV prevention."]}, {"brand": "A Guide to Good Vibes", "title": "Spreading a Little Positivity", "copy": "Danny Lim shared his favourite sayings to celebrate our agency’s move to Chippendale.", "results": "", "images": ["assets/p06/imgi_19_b34279ed-29c7-4402-b3e5-9f6bedd5cdfa_rw_1920.jpg", "assets/p06/imgi_22_2d2f470c-8d41-428f-ab8c-a46106589464_rw_1920.jpg", "assets/p06/imgi_25_1ac2444d-ddd0-4e89-bc10-d07f444c044e_rw_1920.jpg", "assets/p06/imgi_28_e3a78cb8-c049-44ab-a7ec-260c5847a25b_rw_1920.jpg", "assets/p06/imgi_31_974db32f-1a64-4996-bd11-9a1cde49046a_rw_1920.jpg", "assets/p06/imgi_34_7cf6987e-2e1e-4320-9132-24777e8d742b_rw_1920.jpg", "assets/p06/imgi_37_24d538ca-44fc-4275-85c6-23c6310585cc_rw_1920 2.jpg", "assets/p06/imgi_37_24d538ca-44fc-4275-85c6-23c6310585cc_rw_1920.jpg", "assets/p06/imgi_40_e4b13001-8840-4f30-bc21-eb2fa13fbfe5_rw_1920.jpg", "assets/p06/imgi_43_71d43c57-54d7-464c-9897-0ef2fbe41bcc_rw_1920.jpg"], "paragraphs": ["The world could use a little more positivity. And who better to spread it than Sydney’s very own Danny Lim?", "To celebrate our agency’s move to Chippendale, we invited Danny to share his infectious optimism and words of wisdom.", "The result was A Guide to Good Vibes, a collection of Danny’s favourite sayings designed to spread a little happiness."]}, {"brand": "Pizza Hut", "title": "Scott Pizza (Pye)", "copy": "We convinced Supercars driver Scott Pye to change his name to Scott Pizza and challenge the meat pie’s sporting supremacy.", "results": "", "images": ["assets/p07/imgi_16_f49f4e57-11a0-445e-926a-534e404d74b3.jpg", "assets/p07/imgi_18_3d13436d-d52f-4bde-a6aa-369e2035e057.jpg", "assets/p07/imgi_24_ed003657-1f9c-48a6-9297-bdc65ff461a2.jpg", "assets/p07/imgi_24_fa149ba0-f524-455e-9966-b6bd46fd7091.jpg", "assets/p07/imgi_28_f9d8bde4-1a25-47f5-8406-c24a9028b165.jpg", "assets/p07/imgi_32_c5ad37a2-25a5-45c6-9431-a1f5917f748b.jpg"], "paragraphs": ["The humble meat pie has long been a staple of Australian motorsport. But Pizza Hut had other ideas.", "To challenge the pie’s place at the top, we enlisted Supercars driver and pizza fanatic Scott Pye, who surprised fans by changing his name to Scott Pizza.", "A playful stunt that grabbed attention, got fans talking and put pizza firmly on the motorsport menu."]}, {"brand": "Adobe", "title": "Changing the World Through Personalised Digital Experiences", "copy": "Films exploring how Adobe tools help people challenge convention and bring ideas to life.", "results": "", "images": ["assets/p08/imgi_21_e2d2b816-443d-4ec8-824c-9806b275bfd9.gif", "assets/p08/imgi_23_108ebf36-d85e-4e2d-8b76-53196477ce16.jpg", "assets/p08/imgi_27_53bef082-0872-413a-a248-84307b935989.gif", "assets/p08/imgi_30_53bef082-0872-413a-a248-84307b935989_rw_1200.gif", "assets/p08/imgi_31_b2fc89be-cbc0-442c-b8e3-0d47f0119d15.jpg"], "paragraphs": ["Creativity has the power to change the way we live, work and connect.", "A series of films exploring how people around the world are using Adobe’s creative tools to challenge convention, inspire new thinking and make a meaningful impact."], "credits": "Hopeful Monsters"}, {"brand": "Sydney Kayaking Tours", "title": "Let’s Get Nauti", "copy": "A cheeky brand platform and fresh identity to help Sydney Kayaking Tours stand out to adventurous backpackers.", "results": "", "images": ["assets/p09/imgi_2_371c41fa-ef6e-4a11-8581-9c09af0fd1d6_rw_1920.png", "assets/p09/imgi_3_3ee048ea-b091-4ee4-8563-6d9b8a61a394_rw_1920.png", "assets/p09/imgi_4_e67f2aae-3cd3-4d0b-ba79-c8cd3c604e6b_rw_1920.png", "assets/p09/imgi_16_a76c20a1-92a7-4e34-a93e-892b3aa901d0_rw_1920.jpg", "assets/p09/imgi_30_f164b658-0ff7-4c58-9d3c-5f25c02f7aeb_rw_1200.png", "assets/p09/imgi_31_f164b658-0ff7-4c58-9d3c-5f25c02f7aeb_rw_1920.png"], "paragraphs": ["In a competitive tourism market, Sydney Kayaking Tours needed a fresh identity to stand out and connect with adventurous backpackers.", "Built around the cheeky platform Let’s Get Nauti, we created a bold, playful brand identity that captured the spirit of adventure while giving the business a distinctive voice and a memorable point of difference."]}, {"brand": "Marvel", "title": "Get Fit for the Galaxy", "copy": "An 80s-inspired fitness spoof starring Matt Okine to celebrate the Guardians of the Galaxy game launch.", "results": "", "images": ["assets/p10/imgi_25_15514833-9ef0-4599-b862-d8460acfc669_rw_1920.jpg", "assets/p10/imgi_30_2c79341c-c9a0-4152-adb9-86764a051ccb_rw_1920.jpg", "assets/p10/imgi_32_621fe7cd-9cae-402b-82d2-12d8acbffc66_rw_1920.jpg"], "paragraphs": ["To celebrate the launch of Marvel’s Guardians of the Galaxy game, we enlisted comedian Matt Okine to help Aussies get fit for the galaxy after months in lockdown.", "Inspired by the game’s iconic 80s soundtrack and trademark humour, we created a tongue-in-cheek fitness video, giving fans the moves they needed to get galaxy-ready and save the universe alongside Star-Lord."]}, {"brand": "Converse", "title": "CX Artist Series", "copy": "Three emerging artists. Seven days. One immersive space to put Converse CX comfort to the test.", "results": "", "images": ["assets/p11/imgi_1_dfced789-9631-4528-a355-936f0089d819_rw_1200.jpg", "assets/p11/imgi_18_191e8e45-f554-4ce7-bec3-1bb7905cba32_rw_1200.jpg", "assets/p11/imgi_20_ef8ce3a4-03a0-4c6f-b62d-551fd1a88b75_rw_3840.jpg", "assets/p11/imgi_26_00c16f38-5be0-41de-9085-13c6afbaadff_rw_1200.jpg"], "paragraphs": ["How do you put comfort to the ultimate test? Make creativity the challenge.", "To launch the new Converse CX range, we challenged three emerging artists to transform an empty space into an immersive creative experience in just seven days.", "Documenting every high, low and unexpected moment, the campaign celebrated the creative process while putting Converse’s latest innovation in comfort through its paces."]}, {"brand": "Westpac", "title": "3% P.A. Savings Account", "copy": "We positioned a 3% p.a. savings rate as a no-brainer for 18–25-year-olds.", "results": "", "images": ["assets/p12/imgi_3_4131c587-cb4a-406a-8d69-a6dfd4012808_rw_1920.jpg", "assets/p12/imgi_14_b36697a3-49d1-436e-8774-76331df1ef58.jpg", "assets/p12/e25ef037-fe9f-48af-89b5-cbc7c5cdcb03_carw_202x158x1920.gif"], "paragraphs": ["Saving money shouldn’t be complicated.", "To connect with 18–25-year-olds, we positioned Westpac’s 3% p.a. savings rate as a no-brainer. A simple, straightforward way to make their money work harder and stay ahead of the curve."]}, {"brand": "Permagard", "title": "Antimicrobial Shield", "copy": "A campaign highlighting bacteria inside cars and Permagard’s invisible antimicrobial barrier.", "results": "", "images": [], "paragraphs": ["Your car could be harbouring four times more bacteria than a public toilet. Not exactly a comforting thought.", "To highlight this hidden problem, we helped introduce Permagard’s Antimicrobial Shield, an invisible protective barrier designed to eliminate 99.9% of bacteria inside your vehicle.", "A simple solution to a problem most drivers never knew existed."]}, {"brand": "Warrington Borough Transport", "title": "Making Warrington Move", "copy": "For every Saver Card purchased, a tree was planted in Tanzania, India or Kenya.", "results": "The three-month campaign doubled Saver Card sales compared with the equivalent period.", "images": [], "paragraphs": ["A bus ticket that goes a little further.", "To encourage more people to travel by bus, Warrington Borough Transport launched an initiative that planted a tree in Tanzania, India or Kenya for every Saver Card purchased.", "We brought the idea to life through a visual campaign connecting Warrington’s bus routes with a growing network of trees around the world."]}, {"brand": "End Food Waste Australia", "title": "The Great Unwaste", "copy": "A nationwide campaign turning food waste into an opportunity.", "results": "85 million media impressions and nearly 1,000 media mentions in the first week. Unaided campaign recall rose from 6% to 25%, with intended behaviour changes increasing by up to 56%.", "images": ["assets/p15/imgi_18_1c7a5bef-37b6-4d7a-9f2c-4c6b439b3654.jpg", "assets/p15/imgi_20_4c181980-fdda-4d09-ab6a-db0bdb2dab64_rw_1920.jpg", "assets/p15/imgi_23_924453fa-183a-4b52-8052-8caf17ac02dc_rw_1920.jpg", "assets/p15/imgi_26_49587319-15fc-4e14-8d3d-c252bbf5fce2_rw_1920.jpg", "assets/p15/imgi_29_3b6f8230-0336-43c6-947f-6776edd24d9d_rw_1920.gif", "assets/p15/imgi_32_38d6591c-10e4-4580-ac4c-5655d88e3212_rw_1920.jpg", "assets/p15/imgi_35_9b92e1c6-c7b1-481b-a8fa-444b081f95aa_rw_1920 2.jpg", "assets/p15/imgi_35_9b92e1c6-c7b1-481b-a8fa-444b081f95aa_rw_1920.jpg"], "paragraphs": ["Australians waste twice as much food as they think, costing households $19 billion every year. The problem? Most of us don’t realise how much we’re throwing away.", "Rather than another guilt-driven sustainability campaign, we created The Great Unwaste, a nationwide movement that turned food waste into an opportunity.", "By introducing the idea of “unwasting”, we encouraged Australians to rethink leftovers, embrace simple habits and turn everyday food waste into small wins for their wallets and the planet."]}, {"brand": "Open to Relaxing", "title": "Out of Office. Open to Opportunities.", "copy": "A cheeky beach towel that promotes availability while its owner takes a break.", "results": "", "images": ["assets/p16/imgi_20_99c4dc17-a0b0-44b9-943d-acb44b0aae95.jpg", "assets/p16/imgi_21_80d3b5b7-f392-48bb-8cfb-1635a77cb93f.jpg", "assets/p16/imgi_22_dd98ea03-f1a0-4597-9cb9-7b4a0a28bd62_rw_1920.jpg", "assets/p16/imgi_25_d380b55e-a44a-486e-aefc-bd49ee2ceedd_rw_1920.jpg"], "paragraphs": ["The festive season is a time to switch off. But for freelancers and job seekers, taking a break can feel like missing an opportunity.", "So we created Open to Relaxing, a cheeky beach towel that lets everyone know you’re still open for business, even when you’re busy doing absolutely nothing.", "A little self-promotion that does the hard work while you soak up the sun, sip something cold and enjoy a well-earned break."]}];
+const map=[14, 0, 2, 1, 3, 4, 6, 10, 11, 12, 13, 9];
+const originalOpenCase=openCase;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const hero=p=>(p.images||[]).find(x=>/\.(jpe?g|png|webp|avif)$/i.test(x))||(p.images||[])[0]||'';
+// Retain all original intro, physics, menu, transition and case-close behaviour.
+const existing=projects.length;
+for(let j=0;j<catalog.length;j++)if(!map.includes(j))projects.push({title:catalog[j].title,client:catalog[j].brand,model:''});
+const order=[...map,...catalog.map((_,i)=>i).filter(i=>!map.includes(i))];
+projects.forEach((p,i)=>{const item=catalog[order[i]];p.title=item.title;p.client=item.brand;p.visual=hero(item);});
+const menu=document.getElementById('menuProjects');menu.innerHTML='';
+projects.forEach((p,i)=>{const b=document.createElement('button');b.className='menu-row';b.innerHTML='<span>'+String(i+1).padStart(2,'0')+'. '+esc(p.title)+'</span><span>'+esc(p.client)+'</span>';b.onclick=()=>{toggleMenu(false);openCase(i)};menu.append(b)});
+const desk=document.querySelector('.v23-desktop'),list=document.querySelector('.v23-list'),mobile=document.querySelector('.v23-mobile');
+if(desk&&list&&mobile){
+const bgWrap=desk.firstElementChild;bgWrap.innerHTML='';list.innerHTML='';mobile.innerHTML='';
+const bgs=[];projects.forEach((p,i)=>{const bg=document.createElement('div');bg.className='v23-bg'+(i===0?' active':'');bg.style.backgroundImage=p.visual?'url("'+encodeURI(p.visual)+'")':'none';bgWrap.append(bg);bgs.push(bg);
+const r=document.createElement('button');r.className='v23-row'+(i===0?' active':'');r.innerHTML='<span class="n">['+String(i+1).padStart(3,'0')+']</span><span class="t">'+esc(p.title)+'</span><span class="c">'+esc(p.client)+'</span>';
+const activate=()=>{bgs.forEach((b,j)=>b.classList.toggle('active',i===j));list.querySelectorAll('.v23-row').forEach((b,j)=>b.classList.toggle('active',i===j))};r.onmouseenter=activate;r.onfocus=activate;r.onclick=()=>openCase(i);list.append(r);
+const tile=document.createElement('article');tile.className='v23-tile';tile.tabIndex=0;tile.innerHTML=(p.visual?'<img loading="lazy" src="'+esc(p.visual)+'" alt="">':'<div class="portfolio-missing">IMAGE TO ADD</div>')+'<div class="v23-meta"><div class="n">['+String(i+1).padStart(3,'0')+']</div><div class="t">'+esc(p.title)+'</div><div class="c">'+esc(p.client)+'</div></div>';tile.onclick=()=>openCase(i);tile.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCase(i)}};mobile.append(tile);
+});}
+openCase=function(i){originalOpenCase(i);const p=catalog[order[i]],el=document.getElementById('case'),inner=el.querySelector('.case-inner'),h=el.querySelector('#caseHero');const img=hero(p);h.style.backgroundImage=img?'url("'+encodeURI(img)+'")':'none';h.classList.toggle('has-project-image',!!img);
+const content=p.paragraphs.map(t=>'<p>'+esc(t)+'</p>').join('');const media=(p.images||[]).map((src,j)=>'<img loading="lazy" src="'+esc(src)+'" alt="'+esc(p.brand)+' campaign image '+(j+1)+'">').join('')||'<div class="portfolio-missing">PROJECT IMAGES TO ADD</div>';
+inner.querySelectorAll('.case-intro,.case-visual,.case-story,.case-split,.portfolio-body,.portfolio-media,.portfolio-impact,.portfolio-awards').forEach(x=>x.remove());
+const body=document.createElement('section');body.className='portfolio-body';body.innerHTML=content;inner.append(body);
+const mediaEl=document.createElement('section');mediaEl.className='portfolio-media';mediaEl.innerHTML='<div class="portfolio-video"><span class="play">▷</span><span>VIDEO COMING SOON — 16:9 PLACEHOLDER</span></div>'+media;inner.append(mediaEl);
+if(p.results){const impact=document.createElement('section');impact.className='portfolio-impact';impact.innerHTML='<h2>THE RESULTS</h2><p>'+esc(p.results)+'</p>';inner.append(impact)}
+if(p.awards?.length||p.credits){const awards=document.createElement('section');awards.className='portfolio-awards';awards.innerHTML=(p.awards?.length?'<h2>AWARDS</h2>'+p.awards.map(a=>'<p>'+esc(a)+'</p>').join(''):'')+(p.credits?'<h2>CREDITS</h2><p>'+esc(p.credits)+'</p>':'');inner.append(awards)}
+el.scrollTop=0;
+};
+})();</script>
+</body></html>
+<style id="v15-fixes">
+.case-hero{justify-content:flex-end!important;align-items:stretch!important}
+.case-hero-copy{margin:0!important;margin-right:auto!important;margin-left:0!important;width:100%!important;max-width:none!important;padding-left:4vw!important;padding-right:4vw!important;text-align:left!important}
+.case-title,.case-client-hero,.case-kicker{text-align:left!important;margin-left:0!important;margin-right:auto!important}
+@media(max-width:900px){.case-hero-copy{padding-left:18px!important;padding-right:18px!important}}
+/* Work starts as one rigid module. The grid cannot scroll independently before the header docks. */
+.gallery.work-docked{overflow-y:auto;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch}
+</style>
+
+<script id="v15-work-lock">
+(()=>{
+ const g=document.getElementById('gallery'); if(!g) return;
+ const head=g.querySelector('.gallery-head');
+ let docked=false, startY=0, lastY=0;
+ function dock(){ if(docked)return; docked=true; g.classList.add('work-docked'); g.scrollTop=0; }
+ function undock(){ if(!docked)return; docked=false; g.classList.remove('work-docked'); g.scrollTop=0; }
+ // transition===1 is the exact moment the rigid module has reached the nav.
+ const watch=()=>{
+   const tr=(typeof transition==='number')?transition:0;
+   if(tr>=.999 && phase==='WORK') dock();
+   else if(tr<.999) undock();
+   requestAnimationFrame(watch);
+ }; requestAnimationFrame(watch);
+ // At the top of docked work, downward motion reconnects the entire module first.
+ g.addEventListener('touchstart',e=>{if(docked&&g.scrollTop<=1&&e.touches.length===1){startY=lastY=e.touches[0].clientY}}, {passive:true});
+ g.addEventListener('touchmove',e=>{if(!docked||g.scrollTop>1||!startY)return; const y=e.touches[0].clientY,d=y-lastY;if(d>0){e.preventDefault(); undock(); stage.style.visibility='visible'; phase='TRANSITION'; transition=clamp(1-d/(H*.9));} lastY=y;},{passive:false});
+ g.addEventListener('touchend',()=>{startY=lastY=0},{passive:true});
+})();
+</script>
+
+<style id="v16-case-ending">
+/* V16: every case study ends in a fluorescent Impact module. */
+.case-impact{background:var(--acid);min-height:52dvh;margin:0;padding-top:9vw;padding-bottom:9vw}
+.return-reveal,.return-note{display:none!important}
+@media(max-width:900px){.case-impact{min-height:44dvh;padding:64px 18px 72px}}
+</style>
+
+<style id="v17-structural-fixes">
+/* V17 — Selected Work has exactly two states: locked while entering, scrollable only after fully docked. */
+.gallery{overflow:hidden!important;overscroll-behavior:none!important}
+.gallery.work-docked{overflow-y:auto!important;overflow-x:hidden!important;overscroll-behavior-y:contain!important;-webkit-overflow-scrolling:touch}
+/* Never let the mobile breakpoint make the incoming module independently scrollable. */
+@media(max-width:560px){.gallery:not(.work-docked){overflow:hidden!important}}
+
+/* True page-left alignment for every case-study hero. */
+.case-hero{position:relative!important;align-items:stretch!important;justify-content:flex-end!important}
+.case-hero-copy{position:absolute!important;left:0!important;right:auto!important;bottom:0!important;transform:none!important;margin:0!important;width:100%!important;max-width:none!important;padding:0 4vw 7vh!important;text-align:left!important}
+.case-title,.case-client-hero,.case-kicker{display:block!important;text-align:left!important;margin-left:0!important;margin-right:auto!important;transform:none!important}
+@media(max-width:900px){.case-hero-copy{left:0!important;padding:0 18px 34px!important}}
+</style>
+
+<script id="v17-lock-guard">
+(()=>{
+ const g=document.getElementById('gallery');
+ if(!g)return;
+ // Guard against any earlier listener changing scrollTop while the module is still entering.
+ const keepLocked=()=>{
+   const docked=g.classList.contains('work-docked');
+   if(!docked && g.scrollTop!==0) g.scrollTop=0;
+   requestAnimationFrame(keepLocked);
+ };
+ requestAnimationFrame(keepLocked);
+})();
+</script>
