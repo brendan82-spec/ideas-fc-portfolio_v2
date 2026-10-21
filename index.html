@@ -473,13 +473,24 @@ projects.forEach((p,i)=>{const item=catalog[order[i]];p.title=item.title;p.clien
 const menu=document.getElementById('menuProjects');menu.innerHTML='';
 projects.forEach((p,i)=>{const b=document.createElement('button');b.className='menu-row';b.innerHTML='<span>'+String(i+1).padStart(2,'0')+'. '+esc(p.title)+'</span><span>'+esc(p.client)+'</span>';b.onclick=()=>{toggleMenu(false);openCase(i)};menu.append(b)});
 const desk=document.querySelector('.v23-desktop'),list=document.querySelector('.v23-list'),mobile=document.querySelector('.v23-mobile');
+// V2: Original desktop hover imagery comes exclusively from the supplied desktop folder.
+const desktopNames=['great-unwaste.jpg','resmed-sleep.jpg','adobe-takeover.jpg','park-ssc.jpg','massel-cricket.jpg','prep.jpg','scott-pizza.jpg','converse-cx.jpg','westpac-savings.jpg','permaguard.jpg','warrington-routes.jpg','marvel-galaxy.jpg'];
+const desktopVisuals=desktopNames.map(n=>'project-images/Desktop_selected_work_images/'+n);
+// The mobile files are supplied without project names. Provisional ordering is documented in README.
+const mobileVisuals=["project-images/Mobile_Only_selected work_tiles/imgi_4_367dfa30-1b76-4f8d-9991-ef2e1f8ce99e_car_202x158.jpg", "project-images/Mobile_Only_selected work_tiles/imgi_55_c0a143b5-6b8c-4dc7-b508-0972be1c09b1_car_202x158.jpg", "project-images/Mobile_Only_selected work_tiles/imgi_3_8c3005f6-660d-486c-af37-a6d70953f545_car_202x158.gif", "project-images/Mobile_Only_selected work_tiles/imgi_125_befad60a-3f9b-4598-914e-1bf4753a3dc7_car_202x158.jpg", "project-images/Mobile_Only_selected work_tiles/imgi_2_cc362962-5362-4aec-a88f-0c0486068e01_car_202x158.jpg", "project-images/Mobile_Only_selected work_tiles/Great_Un.gif", "project-images/Mobile_Only_selected work_tiles/imgi_83_5ecd00a9-9380-4627-81b1-df3ad73f0dd8_car_202x158.gif", "project-images/Mobile_Only_selected work_tiles/imgi_104_42d9fc8c-d983-49e5-b908-cd4c084b4251_car_202x158.jpg", "project-images/Mobile_Only_selected work_tiles/imgi_69_7f11a156-38fd-405b-b629-b7c0a8691b52_car_202x158.jpg", "project-images/Mobile_Only_selected work_tiles/imgi_111_0a239070-06e4-416b-af0f-8edf68a30c71_car_202x158.jpg", "project-images/Mobile_Only_selected work_tiles/imgi_118_e25ef037-fe9f-48af-89b5-cbc7c5cdcb03_car_202x158.gif", "project-images/Mobile_Only_selected work_tiles/imgi_97_235eff47-4812-4364-a286-b2b8506e0f2c_car_202x158.png"];
 if(desk&&list&&mobile){
 const bgWrap=desk.firstElementChild;bgWrap.innerHTML='';list.innerHTML='';mobile.innerHTML='';
-const bgs=[];projects.forEach((p,i)=>{const bg=document.createElement('div');bg.className='v23-bg'+(i===0?' active':'');bg.style.backgroundImage=p.visual?'url("'+encodeURI(p.visual)+'")':'none';bgWrap.append(bg);bgs.push(bg);
+const bgs=[];projects.forEach((p,i)=>{
+const bg=document.createElement('div');bg.className='v23-bg'+(i===0?' active':'');
+const desktop=desktopVisuals[i]||'';
+bg.style.backgroundImage=desktop?'url("'+encodeURI(desktop)+'")':'none';bgWrap.append(bg);bgs.push(bg);
 const r=document.createElement('button');r.className='v23-row'+(i===0?' active':'');r.innerHTML='<span class="n">['+String(i+1).padStart(3,'0')+']</span><span class="t">'+esc(p.title)+'</span><span class="c">'+esc(p.client)+'</span>';
 const activate=()=>{bgs.forEach((b,j)=>b.classList.toggle('active',i===j));list.querySelectorAll('.v23-row').forEach((b,j)=>b.classList.toggle('active',i===j))};r.onmouseenter=activate;r.onfocus=activate;r.onclick=()=>openCase(i);list.append(r);
-const tile=document.createElement('article');tile.className='v23-tile';tile.tabIndex=0;tile.innerHTML=(p.visual?'<img loading="lazy" src="'+esc(p.visual)+'" alt="">':'<div class="portfolio-missing">IMAGE TO ADD</div>')+'<div class="v23-meta"><div class="n">['+String(i+1).padStart(3,'0')+']</div><div class="t">'+esc(p.title)+'</div><div class="c">'+esc(p.client)+'</div></div>';tile.onclick=()=>openCase(i);tile.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCase(i)}};mobile.append(tile);
+const tile=document.createElement('article');tile.className='v23-tile';tile.tabIndex=0;
+const mobileSrc=mobileVisuals[i]||'';
+tile.innerHTML=(mobileSrc?'<img loading="lazy" src="'+esc(mobileSrc)+'" alt="">':'<div class="portfolio-missing">MOBILE TILE IMAGE TO ADD</div>')+'<div class="v23-meta"><div class="n">['+String(i+1).padStart(3,'0')+']</div><div class="t">'+esc(p.title)+'</div><div class="c">'+esc(p.client)+'</div></div>';tile.onclick=()=>openCase(i);tile.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCase(i)}};mobile.append(tile);
 });}
+
 openCase=function(i){originalOpenCase(i);const p=catalog[order[i]],el=document.getElementById('case'),inner=el.querySelector('.case-inner'),h=el.querySelector('#caseHero');const img=hero(p);h.style.backgroundImage=img?'url("'+encodeURI(img)+'")':'none';h.classList.toggle('has-project-image',!!img);
 const content=p.paragraphs.map(t=>'<p>'+esc(t)+'</p>').join('');const media=(p.images||[]).map((src,j)=>'<img loading="lazy" src="'+esc(src)+'" alt="'+esc(p.brand)+' campaign image '+(j+1)+'">').join('')||'<div class="portfolio-missing">PROJECT IMAGES TO ADD</div>';
 inner.querySelectorAll('.case-intro,.case-visual,.case-story,.case-split,.portfolio-body,.portfolio-media,.portfolio-impact,.portfolio-awards').forEach(x=>x.remove());
@@ -555,3 +566,11 @@ el.scrollTop=0;
  requestAnimationFrame(keepLocked);
 })();
 </script>
+
+<style id="v2-mobile-tile-ratio">
+@media(max-width:700px){
+.v23-tile{width:100%!important;height:auto!important;aspect-ratio:3 / 2!important;min-height:0!important;max-height:none!important;margin-bottom:10px!important}
+.v23-tile img{width:100%;height:100%;object-fit:cover}
+.v23-tile .portfolio-missing{position:absolute;inset:0;display:grid;place-items:center;background:#242424;color:#fff;font-size:11px}
+}
+</style>
